@@ -313,7 +313,9 @@ namespace BcfAutoCAD
 
             // --- parse camera element (your existing logic) ---
             var cameraElement = bcfvDoc.Descendants()
-                .FirstOrDefault(e => string.Equals(e.Name.LocalName, "PerspectiveCamera", StringComparison.OrdinalIgnoreCase));
+                .FirstOrDefault(e => string.Equals(e.Name.LocalName, "PerspectiveCamera", StringComparison.OrdinalIgnoreCase) || string.Equals(e.Name.LocalName, "OrthogonalCamera", StringComparison.OrdinalIgnoreCase));
+
+
             if (cameraElement == null)
                 throw new System.Exception("Camera element not found in .bcfv");
 
