@@ -16,3 +16,13 @@ The improvement would be that you could zoom to the issue location, even you are
 Finally working with ACC issues side by side with AutoCAD should work anyway nicely, the BCF reader code would be only needed if the AutoCAD user has no access to ACC.
 
 
+Here is the original prompt that I used in github copilot to generate the code, as described above there were a lot modifications done on the zoom/select part:
+
+Hi, Please write a small BCF client for AutoCAD in C#. Based on a command a resizeable panel opens with button in it for file selection (*.bcf).
+Once the BCF file (it is a common zip format) is selected, the information from the file is read. The file contains folders, one per issue.
+the folder contains a bcfv file, a bcf file and a png file.
+After reading all this information into memory, the panel should now show the contents of the bcf files in a row, but the tags are stripped.
+It is showing all issues (folders) bcf text in a row with some seperation element. At the end of the text per issue there is a button that sets the AutoCAD camera
+just as it is specified in the bcfv file and at the same time it shows the png image in a seperate resizeable window (also image shall resize with the window)
+
+
