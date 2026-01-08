@@ -9,7 +9,7 @@ This did not work and seems to be quite complicated, that's why the active code 
 
 How to improve the code?
 Camera information in the BCF only contains camera position, view direction, camera up direction and FOV. Target is missing, but target information can be read via entity handle (IfcGuid) supplied in the same file in the BCF (zip):  
-<Selection><Component IfcGuid="1952" ...
+<Component IfcGuid="1952" ...
 With above approach the view saved in BCF file could potentially be reproduced.
 The improvement would be that you could zoom to the issue location, even you are not in the file that contains the "selected component", for example if you have a central DWG that references many DWGs. Of course there are many more improvements needed to run this as a tool, maybe most important one to supply and calculate with correction values if the issues where set in offset positions.
 
